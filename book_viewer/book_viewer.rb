@@ -25,3 +25,11 @@ end
 get "/show/:name" do
   params[:name]
 end
+
+helpers do
+  def in_paragraphs(text)
+    text.split("\n\n").map do |paragraph|
+      "<p>#{paragraph}</p>"
+    end.join
+  end
+end
