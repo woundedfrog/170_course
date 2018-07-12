@@ -17,12 +17,6 @@ helpers do
       sum += info[:interests].count
     end
   end
-
-  def interest_links(user_name)
-    @users[user_name][:interests].map do |interest|
-      interest
-    end
-  end
 end
 
 get "/" do
