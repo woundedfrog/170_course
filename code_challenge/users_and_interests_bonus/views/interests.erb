@@ -1,0 +1,14 @@
+<h1>Search</h1>
+<div>
+  <h2>Interests:</h2>
+  <h4>Select an interest from the list below.</h4>
+  <ul>
+    <% @users.map {|_, info| info[:interests] }.flatten.uniq.each do |interest| %>
+          <li>
+            <a href="/<%= interest.to_s %>">
+              <%= interest %>
+            </a>
+          </li>
+    <% end %>
+  </ul>
+</div>
