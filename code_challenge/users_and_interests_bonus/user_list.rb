@@ -27,11 +27,6 @@ get "/users" do
   erb :user_list
 end
 
-# get "/:interest" do
-#
-#   erb :keyword_search
-# end
-
 get "/interests" do
   erb :interests
 end
