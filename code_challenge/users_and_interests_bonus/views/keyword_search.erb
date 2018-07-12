@@ -1,0 +1,19 @@
+<h1>Filtered by interest</h1>
+<div>
+  <h2>Users:</h2>
+  <h4>Select a user from the list below.</h4>
+  <ul>
+    <% @users.each do |name, info| %>
+        <% included = info[:interests].include?(params[:keyword_name].to_s) %>
+        <% if included %>
+          <li>
+            <a href="/<%= name.to_s %>">
+              <%= name.to_s %>
+            </a>
+          </li>
+        <% end %>
+    <% end %>
+  </ul>
+  <a href="/interests">Show all interests</a>
+  <a href="/users">Show all users</a>
+</div>
