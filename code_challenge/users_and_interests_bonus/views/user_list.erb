@@ -1,0 +1,13 @@
+<div>
+  <h1>Users:</h1>
+  <h4>Select a user from the list below.</h4>
+  <ul>
+    <% @users.keys.each do |name| %>
+      <li>
+        <a href="/<%= name %>">
+          <%= name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>
